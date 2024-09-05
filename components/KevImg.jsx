@@ -1,8 +1,11 @@
+import Image from 'next/image'
 import React from 'react'
 
-const KevImg = () => {
+const KevImg = ({containerStyles, imgSrc}) => {
   return (
-    <div>KevImg</div>
+    <div className={`${containerStyles}`}>
+      <Image src={imgSrc} fill priority alt='Kevin Kimani' />
+    </div>
   )
 }
 
