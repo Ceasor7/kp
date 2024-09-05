@@ -1,8 +1,10 @@
 import { Send } from 'lucide-react';
 import Link from 'next/link';
-import { RiArrowDownSLine } from 'react-icons/ri';
+import { RiArrowDownSLine, RiBriefcase4Fill, RiTeamFill, RiTodoFill } from 'react-icons/ri';
 import Socials from './Socials';
 import { Button } from './ui/button';
+import Badge from "./Badge"
+import KevImg from './KevImg';
 
 const Hero = () => {
   return (
@@ -35,7 +37,7 @@ const Hero = () => {
           </div>
 
                 <div className=' hidden sm:flex relative'>
-                <Badge 
+                <Badge
                 containerStyles="absolute top-[24%] -left-[5rem]" 
                 icon={<RiBriefcase4Fill />} 
                 endCountNum={3} 
