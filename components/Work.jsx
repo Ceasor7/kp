@@ -16,7 +16,7 @@ const projectData = [
     category: "react JS",
     name: "Next Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam? Aliquid similique et hic voluptate officiis, temporibus deserunt soluta vero explicabo!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
     link: "/",
     github: "/",
   },
@@ -118,7 +118,6 @@ const Work = () => {
         </div>
         <div className=" lg:max-w-[800px] lg:absolute right-0 top-0">
           <Swiper
-            className=" h-[400px]"
             slidesPerView={1}
             breakpoints={{
               640: {
