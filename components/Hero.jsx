@@ -8,19 +8,18 @@ import KevImg from './KevImg';
 
 const Hero = () => {
   return (
-    <section className=" py-12 md:py-24 h-[84vh] md:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
+    <section className=" py-12 lg:py-24 h-[84vh] lg:pt-10">
       <div className=" container mx-auto">
         <div className=" flex justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto md:mx-0 text-center md:text-left">
-            <div className=" text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
-              Web Developer
+            <div className=" text-sm uppercase font-semibold mb-2 text-primary tracking-[4px]">
+              International Relations | Theatre enthusiast
             </div>
-            <h1 className="h1 mb-4">Hello, my name is Ryan Davis</h1>
+            <h1 className="h1 mb-2">Kevin Kimani Kahuro</h1>
             <p className="subtitle max-w-[490x] mx-auto md:mx-0">
-              Brief description with insights into myself, my vocational
-              journey, and what i engage in proffessionally
+              Kevin Kimani Kahuro is a professional, top performing and goal-oriented theatre manager and lecturer with excellent skills in strategic planning, partnerships and resource mobilization.
             </p>
-            <div className="flex flex-col gap-y-3 sm:flex-row gap-x-3 mx-auto lg:mx-0 mb-12">
+            <div className="flex flex-col gap-y-3 sm:flex-row gap-x-3 mx-auto lg:mx-0 mb-6">
               <Link href="/contact">
                 <Button className="gap-x-2">
                   Contact me <Send size={18} />
@@ -36,32 +35,32 @@ const Hero = () => {
             />
           </div>
 
-                <div className=' hidden sm:flex relative'>
-                <Badge
-                containerStyles="absolute top-[24%] -left-[5rem]" 
+                <div className=' hidden lg:flex relative'>
+                {/*<Badge
+                containerStyles="absolute top-[12%] -left-[3rem]" 
                 icon={<RiBriefcase4Fill />} 
                 endCountNum={3} 
                 badgeText='Years of Experience' 
-                />
+                />*/}
                 <Badge 
-                containerStyles="absolute top-[80%] -left-[1rem]" 
+                containerStyles="absolute text-black top-[65%] -left-[3rem]" 
                 icon={<RiTodoFill />} 
                 endCountNum={6} 
                 endCountText="k"
                 badgeText='Initiated Projects' 
                 />
                 <Badge 
-                containerStyles="absolute top-[55%] -right-8" 
+                containerStyles="absolute text-black top-[55%] -right-[7rem]" 
                 icon={<RiTeamFill />} 
                 endCountNum={9} 
                 endCountText="k"
                 badgeText='Happy Clients' 
                 />
                     <div className=' bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2'></div>
-                    <KevImg containerStyles=" bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom" imgSrc="/kev.png" />
+                    <KevImg containerStyles=" w-[420px] h-[320px] " imgSrc="/kevnew.png" />
                 </div>
             </div>
-            <div className=' hidden sm:flex absolute left-2/4 bottom-44 md:bottom-12 animate-bounce' >
+            <div className=' hidden lg:flex absolute left-2/4 bottom-44 lg:bottom-12 animate-bounce' >
                 <RiArrowDownSLine className=' text-3xl text-primary' />
             </div>
         </div>

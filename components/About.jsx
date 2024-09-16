@@ -20,7 +20,7 @@ import {
 const infoData = [
   {
     icon: <User2 size={20} />,
-    text: "Ryan Davis",
+    text: "Kevin Kimani",
   },
   {
     icon: <PhoneCall size={20} />,
@@ -136,7 +136,7 @@ const About = () => {
   };
 
   return (
-    <div className=" lg:h-[860px] pb-12 lg:py-24">
+    <div className=" lg:h-[860px] mt-16 sm:mt-0 pb-12 lg:py-24">
       <div className=" container mx-auto">
         <h2 className=" section-title mb-8 md:mb-16 text-center mx-auto">
           About Me
@@ -144,27 +144,27 @@ const About = () => {
         <div className=" flex flex-col lg:flex-row">
           <div className=" hidden lg:flex flex-1 relative">
             <KevImg
-              containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative"
-              imgSrc="/about/developer.png"
+              containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[400px] h-[400px] bg-no-repeat relative"
+              imgSrc="/kevnew.png"
             />
           </div>
           <div className=" flex-1">
             <Tabs defaultValue="personal">
               <TabsList className="w-full grid lg:grid-cols-3 lg:max-w-[520px] lg:border lg:rounded-full dark:border-none">
                 <TabsTrigger
-                  className="rounded-full w-[162px] lg:w-auto px-3 py-1.5 inline-flex items-center justify-center whitespace-nowrap text-base font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-sm h-[48px]"
+                  className="rounded-full w-[162px] lg:w-auto px-3 py-1.5 inline-flex items-center justify-center whitespace-nowrap text-base font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:text-black data-[state=active]:shadow-sm h-[48px]"
                   value="personal"
                 >
                   Personal Info
                 </TabsTrigger>
                 <TabsTrigger
-                  className="rounded-full w-[162px] lg:w-auto px-3 py-1.5 inline-flex items-center justify-center whitespace-nowrap text-base font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-sm h-[48px]"
+                  className="rounded-full w-[162px] lg:w-auto px-3 py-1.5 inline-flex items-center justify-center whitespace-nowrap text-base font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:text-black data-[state=active]:shadow-sm h-[48px]"
                   value="qualifications"
                 >
                   Qualifications
                 </TabsTrigger>
                 <TabsTrigger
-                  className="rounded-full w-[162px] lg:w-auto px-3 py-1.5 inline-flex items-center justify-center whitespace-nowrap text-base font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-sm h-[48px]"
+                  className="rounded-full w-[162px] lg:w-auto px-3 py-1.5 inline-flex items-center justify-center whitespace-nowrap text-base font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:text-black data-[state=active]:shadow-sm h-[48px]"
                   value="skills"
                 >
                   Skills
