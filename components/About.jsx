@@ -28,7 +28,11 @@ const infoData = [
   },
   {
     icon: <MailIcon size={20} />,
-    text: "kevin@kitfest.co.ke",
+    text: "kevinkimani76@gmail.com",
+  },
+  {
+    icon: <MailIcon size={20} />,
+    text: "kevin@kenyaculturalcentre.go.ke",
   },
   {
     icon: <Calendar size={20} />,
@@ -46,45 +50,46 @@ const infoData = [
 
 const qualificationData = [
   {
-    title: "education",
+    title: "education 2004 - 2018",
     data: [
       {
-        university: "example University",
-        qualification: "Bachelor of Theatre and Film",
-        years: "2015 - 2018",
+        university: "Kenyatta University",
+        qualification: "Masters in Film and Theatre Arts",
+        years: "2014 - 2018",
       },
       {
-        university: "Another University",
-        qualification: "Bachelor of Theatre and Film",
-        years: "2015 - 2018",
+        university: "Kenyatta University",
+        qualification: "	Bachelor of Arts – Theatre Arts and Film Technology",
+        years: "2009 - 2013",
       },
       {
-        university: "Another 2 University",
-        qualification: "Bachelor of Theatre and Film",
-        years: "2015 - 2018",
+        university: "Komothai Boys High School",
+        qualification: "Kenya Certificate of Secondary Education ( B+)",
+        years: "2004 – 2007",
       },
     ],
   },
   {
-    title: "experience",
+    title: "education 2018 - upto date",
     data: [
-      {
-        company: "Kenya International Theatre Festival Trust",
-        role: "Intern Software engineer",
-        years: "2015 - 2018",
+    {
+        university: "Kenyatta University",
+      qualification: "PhD in Arts Management",
+        years: "2022 – to date",
       },
       {
-        company: "Kenya cultural Center",
-        role: "Junior Software engineer",
-        years: "2015 - 2018",
+        university: " Kenya School of Government",
+        qualification: "Senior Management Course",
+        years: "January 2023 – April 2023",
       },
-      {
-        company: "Kenya National Theatre",
-        role: "Senior software engineer",
-        years: "2015 - 2018",
+    {
+        university: "Kenya Institute of Management",
+        qualification: "Certificate in Strategic Management and Leadership",
+        years: "2019 - 2020",
       },
     ],
   },
+  
 ];
 
 const skillData = [
@@ -92,39 +97,37 @@ const skillData = [
     title: "skills",
     data: [
       {
-        name: "International Relations",
+        name: "♦ International Cultural Relations - I possess strong skills in International Cultural Relations, including the ability to navigate cultural differences, develop cross-cultural communication strategies, and build relationships with individuals and organizations from diverse cultural backgrounds.",
       },
       {
-        name: "International Relations",
+        name: "♦ Management Skills - Adequate capacity to perform executive duties in an organization while avoiding crisis situations and promptly solving problems when they occur. These skills include; ",
       },
       {
-        name: "International Relations",
+        name: "1. Conceptual Skills",
       },
       {
-        name: "International Relations",
+        name: "2. Interpersonal Skills",
       },
       {
-        name: "International Relations",
+        name: "3 Theatre management skills",
       },
       {
-        name: "International Relations",
-      },
-    ],
-  },
-  {
-    title: "tools",
-    data: [
-      {
-        imgPath: "/about/vscode.svg",
+        name: "4 Marketing skills",
       },
       {
-        imgPath: "/about/figma.svg",
+        name: "5 Strategic planning skills",
       },
       {
-        imgPath: "/about/notion.svg",
+        name: "♦ Supervision and Leadership",
       },
       {
-        imgPath: "/about/wordpress.svg",
+        name: "♦ Communications and Interpersonal skills",
+      },
+      {
+        name: "♦ ICT Competency - Proficient in Mac & windows environment, competent in Microsoft Office Application suite, the internet and emails",
+      },
+      {
+        name: "♦ Driving skills - I possess strong driving skills with a proven track record of safe and efficient operation of vehicles",
       },
     ],
   },
@@ -142,15 +145,9 @@ const About = () => {
           About Me
         </h2>
         <div className=" flex flex-col lg:flex-row">
-          <div className=" hidden lg:flex flex-1 relative">
-            <KevImg
-              containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[400px] h-[400px] bg-no-repeat relative"
-              imgSrc="/kevnew.png"
-            />
-          </div>
           <div className=" flex-1">
             <Tabs defaultValue="personal">
-              <TabsList className="w-full grid lg:grid-cols-3 lg:max-w-[520px] lg:border lg:rounded-full dark:border-none">
+              <TabsList className="w-full grid justify-center lg:grid-cols-3 lg:max-w-[1024px] lg:border lg:rounded-full dark:border-none">
                 <TabsTrigger
                   className="rounded-full w-[162px] lg:w-auto px-3 py-1.5 inline-flex items-center justify-center whitespace-nowrap text-base font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:text-black data-[state=active]:shadow-sm h-[48px]"
                   value="personal"
@@ -173,13 +170,9 @@ const About = () => {
               <div className="text-lg mt-12 lg:mt-8">
                 <TabsContent value="personal">
                   <div className=" text-center lg:text-left">
-                    <h3 className=" h3 mb-4">
-                      Unmatched Service quality for over 10 years
-                    </h3>
-                    <p className=" subtitle max-w-xl mx-auto lg:mx-0">
-                      I speacialize in crafting intuitive websites with
-                      cutting-edge technology, delivering dynamic and engaging
-                      user experience
+                    <p className=" subtitle max-w-5xl mx-auto lg:mx-0">
+                      Kevin Kimani Kahuro is a skilled expert in International Cultural Relations, management, strategic planning, and marketing, with a strong background in cultural exchange and leadership. He holds a Bachelor's and Master's degree in Film and Theatre Arts, is pursuing a PhD in Arts Management, and currently serves as Programs and Business Development Manager at the Kenya Cultural Centre, as well as Secretary General of the African Theatre Union.
+                      He is the founder of several arts initiatives, including the Kenya International Theatre Festival and Kenya Theatre Awards, and is involved in various prestigious organizations such as IETM, the Arts Society of Kenya, and the Kenya Music Festival.
                     </p>
                     <div className=" grid lg:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
@@ -197,27 +190,27 @@ const About = () => {
                     <div className=" flex flex-col gap-y-2">
                       <div className=" text-primary">Language Skills</div>
                       <div className=" border-b border-border"></div>
-                      <div>English, French, Spanish, Italian</div>
+                      <div>English, Swahili & Kikuyu</div>
                     </div>
                   </div>
                 </TabsContent>
                 <TabsContent value="qualifications">
                   <div>
                     <h3 className=" h3 mb-8 text-center lg:text-left">
-                      My Awesome Journey
+                      My Academic Journey
                     </h3>
                     <div className=" grid md:grid-cols-2 gap-y-8">
                       <div className=" flex flex-col gap-y-6">
                         <div className=" flex gap-x-4 items-center text-[22px] text-primary">
                           <Briefcase />
                           <h4 className=" capitalize font-medium">
-                            {getData(qualificationData, "experience").title}
+                            {getData(qualificationData, "education 2018 - upto date").title}
                           </h4>
                         </div>
                         <div className=" flex flex-col gap-y-8">
-                          {getData(qualificationData, "experience").data.map(
+                          {getData(qualificationData, "education 2018 - upto date").data.map(
                             (item, index) => {
-                              const { company, role, years } = item;
+                              const { university, qualification, years } = item;
                               return (
                                 <div
                                   className=" flex gap-x-8 group"
@@ -228,10 +221,10 @@ const About = () => {
                                   </div>
                                   <div>
                                     <div className=" font-semibold text-xl leading-none mb-2">
-                                      {company}
+                                      {university}
                                     </div>
                                     <div className=" text-lg leading-none text-muted-foreground mb-4">
-                                      {role}
+                                      {qualification}
                                     </div>
                                     <div className=" text-base font-medium">
                                       {years}
@@ -247,11 +240,11 @@ const About = () => {
                         <div className=" flex gap-x-4 items-center text-[22px] text-primary">
                           <GraduationCap size={28} />
                           <h4 className=" capitalize font-medium">
-                            {getData(qualificationData, "education").title}
+                            {getData(qualificationData, "education 2004 - 2018").title}
                           </h4>
                         </div>
                         <div className=" flex flex-col gap-y-8">
-                          {getData(qualificationData, "education").data.map(
+                          {getData(qualificationData, "education 2004 - 2018").data.map(
                             (item, index) => {
                               const { university, qualification, years } = item;
                               return (
@@ -295,35 +288,13 @@ const About = () => {
                             return (
                               <div
                                 key={index}
-                                className=" w-2/4 text-center lg:text-left mx-auto lg:mx-0"
+                                className=" text-center lg:text-left mx-auto lg:mx-0"
                               >
                                 <div className=" font-medium">{name}</div>
                               </div>
                             );
                           }
                         )}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className=" text-xl font-semibold mb-2 lg:text-left">
-                        Tools
-                      </h4>
-                      <div className="border-b border-border mb-4"></div>
-                      <div className=" flex gap-x-8 justify-center lg:justify-start">
-                        {getData(skillData, "tools").data.map((item, index) => {
-                          const { imgPath } = item;
-                          return (
-                            <div key={index}>
-                              <Image
-                                src={imgPath}
-                                width={48}
-                                height={48}
-                                alt="Tools i use"
-                                priority
-                              />
-                            </div>
-                          );
-                        })}
                       </div>
                     </div>
                   </div>

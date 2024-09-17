@@ -107,13 +107,15 @@ const Work = () => {
   return (
     <div className=" relative mb-12 lg:mb-48">
       <div className=" container mx-auto">
-        <div className="max-w-[400px] mx-auto lg:mx-0 text-center lg:text-left mb-12 lg:h-[400px] flex flex-col justify-center items-center lg:items-start">
-          <h2 className=" section-title mb-4">Latest Projects</h2>
+        <div className="max-w-[350px] mx-auto lg:mx-0 text-center lg:text-left mb-12 lg:h-[400px] flex flex-col justify-center items-center lg:items-start">
+          <h2 className=" section-title mb-4">Work History</h2>
           <p className="subtitle mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. R
+            Each position listed reflects my career progression, skills
+            development, and contributions to the organizations you've worked
+            for.
           </p>
           <Link href="/projects">
-            <Button>All Projects</Button>
+            <Button>View More</Button>
           </Link>
         </div>
         <div className=" lg:max-w-[800px] lg:absolute right-0 top-0">
