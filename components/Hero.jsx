@@ -45,16 +45,16 @@ const Hero = () => {
                 <Badge 
                 containerStyles="absolute text-black top-[65%] -left-[3rem]" 
                 icon={<RiTodoFill />} 
-                endCountNum={6} 
-                endCountText="k"
+                endCountNum={22} 
+                /*endCountText="k"*/
                 badgeText='Initiated Projects' 
                 />
                 <Badge 
                 containerStyles="absolute text-black top-[55%] -right-[7rem]" 
                 icon={<RiTeamFill />} 
-                endCountNum={9} 
-                endCountText="k"
-                badgeText='Happy Clients' 
+                endCountNum={20} 
+              /*endCountText="k"*/
+                badgeText='Finished projects' 
                 />
                     <div className=' bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2'></div>
                     <KevImg containerStyles=" w-[420px] h-[320px] " imgSrc="/kevnew.png" />

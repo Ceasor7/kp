@@ -64,10 +64,10 @@ const Page = () => {
             {categories.map((category, index) => {
               return (
                 <TabsTrigger
-                  key={index} // Adding the missing key prop
+                  key={index} 
                   onClick={() => setCategory(category)}
                   value={category}
-                  className="rounded-full w-[162px] capitalize lg:w-auto px-3 py-1.5 inline-flex items-center justify-center whitespace-nowrap text-base font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-sm h-[48px]"
+                  className="rounded-full w-[162px] capitalize lg:w-auto px-3 py-1.5 inline-flex items-center justify-center whitespace-nowrap text-base font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:text-black data-[state=active]:shadow-sm h-[48px]"
                 >
                   {category}
                 </TabsTrigger>
