@@ -143,7 +143,7 @@ const About = () => {
         <h2 className=" section-title mb-8 md:mb-16 text-center mx-auto">
           About Me
         </h2>
-        <div className=" flex flex-col lg:flex-row">
+        <div className=" flex flex-col max-w-full lg:flex-row">
           <div className=" flex-1">
             <Tabs defaultValue="personal">
               <TabsList className="w-full grid justify-center lg:grid-cols-3 lg:max-w-[1024px] lg:border lg:rounded-full dark:border-none">
@@ -170,19 +170,22 @@ const About = () => {
                 <TabsContent value="personal">
                   <div className=" text-center lg:text-left">
                     <p className=" subtitle max-w-5xl mx-auto lg:mx-0">
-                      Kevin Kimani Kahuro is a skilled expert in International
-                      Cultural Relations, management, strategic planning, and
-                      marketing, with a strong background in cultural exchange
-                      and leadership. He holds a Bachelor&apos;s and
-                      Master&apos;s degree in Film and Theatre Arts, is pursuing
-                      a PhD in Arts Management, and currently serves as Programs
-                      and Business Development Manager at the Kenya Cultural
-                      Centre, as well as Secretary General of the African
-                      Theatre Union. He is the founder of several arts
-                      initiatives, including the Kenya International Theatre
-                      Festival and Kenya Theatre Awards, and is involved in
-                      various prestigious organizations such as IETM, the Arts
-                      Society of Kenya, and the Kenya Music Festival.
+                      He holds a Bachelor&apos;s and Master&apos;s degree in
+                      Film and Theatre Arts and is currently pursuing his PhD in
+                      Arts Management. Kevin is the Programs and Business
+                      Development manager at the Kenya Cultural Centre
+                      incorporating the Kenya National Theatre, Chairperson,
+                      Kenya International Theatre Festival Trust, an Executive
+                      Committee member of the Kenya Music Festival and serves as
+                      the Secretary General of the African Theatre Union (ATU).
+                      In addition to his current positions, he is the founder of
+                      the Kenya International Theatre Festival, Kenya Theatre
+                      Awards & the Creative Arts Leadership Institute, a member
+                      of International Network for Contemporary Performing Arts
+                      (IETM) and IETM 2023 Global connector, the Arts Society of
+                      Kenya (TASK), Theatre Arts Practitioners Society of Kenya
+                      (TAPS), and Film Lecturers and Trainers Association of
+                      Kenya (FLeTA).
                     </p>
                     <div className=" grid lg:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {

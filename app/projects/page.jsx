@@ -1,92 +1,203 @@
-'use client'
-import React, { useState } from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../@/components/ui/tabs'
-import ProjectCard from '../../components/ProjectCard'
+"use client";
+import React, { useState } from "react";
+import Workmodal from "../../components/Workmodal";
+import ProjectCard from "../../components/ProjectCard";
 
 const projectData = [
   {
     image: "/work/3.png",
-    category: "react JS",
     name: "Next Website",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
     link: "/",
-    github: "/",
+    duties: {
+      intro:
+        "During the development of this project, the following duties were performed:",
+      list: [
+        "Designed and developed the frontend using React.",
+        "Integrated the backend API with the frontend.",
+        "Ensured responsiveness across devices.",
+        "Implemented authentication and authorization.",
+        "Handled deployment and post-deployment monitoring.",
+      ],
+    },
   },
   {
     image: "/work/1.png",
-    category: "react JS",
     name: "Next Website",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
     link: "/",
-    github: "/",
+    duties: {
+      intro: "The project responsibilities included the following tasks:",
+      list: [
+        "Created a custom design system using Tailwind CSS.",
+        "Built reusable components for the project.",
+        "Connected the application with external APIs.",
+        "Optimized images and content for faster loading times.",
+        "Monitored app performance after deployment.",
+      ],
+    },
   },
-  {
-    image: "/work/2.png",
-    category: "react JS",
-    name: "Next Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: "Next JS ",
-    name: "Next Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
-    link: "/",
-    github: "/",
-  },
-];
 
-const uniqueCategories = [
-  'all projects',
-  ...new Set(projectData.map((item) => item.category)),
+  {
+    image: "/work/1.png",
+    name: "Next Website",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
+    link: "/",
+    duties: {
+      intro: "The project responsibilities included the following tasks:",
+      list: [
+        "Created a custom design system using Tailwind CSS.",
+        "Built reusable components for the project.",
+        "Connected the application with external APIs.",
+        "Optimized images and content for faster loading times.",
+        "Monitored app performance after deployment.",
+      ],
+    },
+  },
+
+  {
+    image: "/work/1.png",
+    name: "Next Website",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
+    link: "/",
+    duties: {
+      intro: "The project responsibilities included the following tasks:",
+      list: [
+        "Created a custom design system using Tailwind CSS.",
+        "Built reusable components for the project.",
+        "Connected the application with external APIs.",
+        "Optimized images and content for faster loading times.",
+        "Monitored app performance after deployment.",
+      ],
+    },
+  },
+
+  {
+    image: "/work/1.png",
+    name: "Next Website",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
+    link: "/",
+    duties: {
+      intro: "The project responsibilities included the following tasks:",
+      list: [
+        "Created a custom design system using Tailwind CSS.",
+        "Built reusable components for the project.",
+        "Connected the application with external APIs.",
+        "Optimized images and content for faster loading times.",
+        "Monitored app performance after deployment.",
+      ],
+    },
+  },
+
+  {
+    image: "/work/1.png",
+    name: "Next Website",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
+    link: "/",
+    duties: {
+      intro: "The project responsibilities included the following tasks:",
+      list: [
+        "Created a custom design system using Tailwind CSS.",
+        "Built reusable components for the project.",
+        "Connected the application with external APIs.",
+        "Optimized images and content for faster loading times.",
+        "Monitored app performance after deployment.",
+      ],
+    },
+  },
+
+  {
+    image: "/work/1.png",
+    name: "Next Website",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
+    link: "/",
+    duties: {
+      intro: "The project responsibilities included the following tasks:",
+      list: [
+        "Created a custom design system using Tailwind CSS.",
+        "Built reusable components for the project.",
+        "Connected the application with external APIs.",
+        "Optimized images and content for faster loading times.",
+        "Monitored app performance after deployment.",
+      ],
+    },
+  },
+
+  {
+    image: "/work/1.png",
+    name: "Next Website",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
+    link: "/",
+    duties: {
+      intro: "The project responsibilities included the following tasks:",
+      list: [
+        "Created a custom design system using Tailwind CSS.",
+        "Built reusable components for the project.",
+        "Connected the application with external APIs.",
+        "Optimized images and content for faster loading times.",
+        "Monitored app performance after deployment.",
+      ],
+    },
+  },
 ];
 
 const Page = () => {
-  const [categories, setCategories] = useState(uniqueCategories);
-  const [category, setCategory] = useState('all projects');
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [modalDuties, setModalDuties] = useState({ intro: "", list: [] });
 
-  const filteredProjects = projectData.filter((project) => {
-    return category === 'all projects' ? project : project.category === category;
-  });
+  const handleLinkClick = (duties) => {
+    setModalDuties(duties);
+    setModalOpen(true);
+  };
 
   return (
-    <div className=' min-h-screen pt-12'>
-      <div className=' container mx-auto'>
-        <h2 className=' section-title mb-8 lg:mb-16 text-center mx-auto'>My Projects</h2>
-        <Tabs defaultValue={category} className=' mb-24 lg:mb-48'>
-          <TabsList className="w-full grid lg:grid-cols-3 lg:max-w-[520px] lg:border lg:rounded-full dark:border-none">
-            {categories.map((category, index) => {
-              return (
-                <TabsTrigger
-                  key={index} 
-                  onClick={() => setCategory(category)}
-                  value={category}
-                  className="rounded-full w-[162px] capitalize lg:w-auto px-3 py-1.5 inline-flex items-center justify-center whitespace-nowrap text-base font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:text-black data-[state=active]:shadow-sm h-[48px]"
-                >
-                  {category}
-                </TabsTrigger>
-              );
-            })}
-          </TabsList>
-          <div className=' text-lg lg:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4'>
-            {filteredProjects.map((project, index) => {
-              return (
-                <TabsContent value={category} key={index}>
-                  <ProjectCard project={project} />
-                </TabsContent>
-              );
-            })}
-          </div>
-        </Tabs>
+    <div className="min-h-screen py-16">
+      <div className="container mx-auto">
+        <h2 className="section-title mb-8 lg:mb-16 text-center mx-auto">
+          My Work History
+        </h2>
+        <p className=" subtitle text-center mx-auto lg:mx-0">
+          The Work History page offers a comprehensive view of my career path,
+          illustrating a broad range of experiences across cultural management,
+          project leadership, and financial oversight. Each role is detailed
+          with key responsibilities such as leading international teams,
+          managing cross-border cultural exchange programs, and ensuring the
+          successful execution of large-scale cultural projects. The page
+          reflects my management proficiency, from conceptualizing initiatives
+          to overseeing financial strategies and driving sustainable cultural
+          growth.
+        </p>
+        <div className="text-lg lg:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+          {projectData.map((project, index) => (
+            <ProjectCard
+              key={index}
+              project={project}
+              onLinkClick={() => handleLinkClick(project.duties)}
+            />
+          ))}
+        </div>
+        {isModalOpen && (
+          <Workmodal onClose={() => setModalOpen(false)}>
+            <h3 className="text-xl font-semibold mb-4">Duties</h3>
+            <p>{modalDuties.intro}</p>
+            <ul className="list-disc pl-5 mt-2">
+              {modalDuties.list.map((duty, idx) => (
+                <li key={idx}>{duty}</li>
+              ))}
+            </ul>
+          </Workmodal>
+        )}
       </div>
     </div>
   );
 };
 
-export default Page; // Use the corrected uppercase component name
+export default Page;
