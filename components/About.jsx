@@ -72,9 +72,9 @@ const qualificationData = [
   {
     title: "education 2018 - upto date",
     data: [
-    {
+      {
         university: "Kenyatta University",
-      qualification: "PhD in Arts Management",
+        qualification: "PhD in Arts Management",
         years: "2022 – to date",
       },
       {
@@ -82,14 +82,13 @@ const qualificationData = [
         qualification: "Senior Management Course",
         years: "January 2023 – April 2023",
       },
-    {
+      {
         university: "Kenya Institute of Management",
         qualification: "Certificate in Strategic Management and Leadership",
         years: "2019 - 2020",
       },
     ],
   },
-  
 ];
 
 const skillData = [
@@ -171,8 +170,19 @@ const About = () => {
                 <TabsContent value="personal">
                   <div className=" text-center lg:text-left">
                     <p className=" subtitle max-w-5xl mx-auto lg:mx-0">
-                      Kevin Kimani Kahuro is a skilled expert in International Cultural Relations, management, strategic planning, and marketing, with a strong background in cultural exchange and leadership. He holds a Bachelor's and Master's degree in Film and Theatre Arts, is pursuing a PhD in Arts Management, and currently serves as Programs and Business Development Manager at the Kenya Cultural Centre, as well as Secretary General of the African Theatre Union.
-                      He is the founder of several arts initiatives, including the Kenya International Theatre Festival and Kenya Theatre Awards, and is involved in various prestigious organizations such as IETM, the Arts Society of Kenya, and the Kenya Music Festival.
+                      Kevin Kimani Kahuro is a skilled expert in International
+                      Cultural Relations, management, strategic planning, and
+                      marketing, with a strong background in cultural exchange
+                      and leadership. He holds a Bachelor&apos;s and
+                      Master&apos;s degree in Film and Theatre Arts, is pursuing
+                      a PhD in Arts Management, and currently serves as Programs
+                      and Business Development Manager at the Kenya Cultural
+                      Centre, as well as Secretary General of the African
+                      Theatre Union. He is the founder of several arts
+                      initiatives, including the Kenya International Theatre
+                      Festival and Kenya Theatre Awards, and is involved in
+                      various prestigious organizations such as IETM, the Arts
+                      Society of Kenya, and the Kenya Music Festival.
                     </p>
                     <div className=" grid lg:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
@@ -204,72 +214,78 @@ const About = () => {
                         <div className=" flex gap-x-4 items-center text-[22px] text-primary">
                           <Briefcase />
                           <h4 className=" capitalize font-medium">
-                            {getData(qualificationData, "education 2018 - upto date").title}
+                            {
+                              getData(
+                                qualificationData,
+                                "education 2018 - upto date"
+                              ).title
+                            }
                           </h4>
                         </div>
                         <div className=" flex flex-col gap-y-8">
-                          {getData(qualificationData, "education 2018 - upto date").data.map(
-                            (item, index) => {
-                              const { university, qualification, years } = item;
-                              return (
-                                <div
-                                  className=" flex gap-x-8 group"
-                                  key={index}
-                                >
-                                  <div className=" h-[84px] w-[1px] bg-border relative ml-2">
-                                    <div className=" w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                          {getData(
+                            qualificationData,
+                            "education 2018 - upto date"
+                          ).data.map((item, index) => {
+                            const { university, qualification, years } = item;
+                            return (
+                              <div className=" flex gap-x-8 group" key={index}>
+                                <div className=" h-[84px] w-[1px] bg-border relative ml-2">
+                                  <div className=" w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                </div>
+                                <div>
+                                  <div className=" font-semibold text-xl leading-none mb-2">
+                                    {university}
                                   </div>
-                                  <div>
-                                    <div className=" font-semibold text-xl leading-none mb-2">
-                                      {university}
-                                    </div>
-                                    <div className=" text-lg leading-none text-muted-foreground mb-4">
-                                      {qualification}
-                                    </div>
-                                    <div className=" text-base font-medium">
-                                      {years}
-                                    </div>
+                                  <div className=" text-lg leading-none text-muted-foreground mb-4">
+                                    {qualification}
+                                  </div>
+                                  <div className=" text-base font-medium">
+                                    {years}
                                   </div>
                                 </div>
-                              );
-                            }
-                          )}
+                              </div>
+                            );
+                          })}
                         </div>
                       </div>
                       <div className=" flex flex-col gap-y-6">
                         <div className=" flex gap-x-4 items-center text-[22px] text-primary">
                           <GraduationCap size={28} />
                           <h4 className=" capitalize font-medium">
-                            {getData(qualificationData, "education 2004 - 2018").title}
+                            {
+                              getData(
+                                qualificationData,
+                                "education 2004 - 2018"
+                              ).title
+                            }
                           </h4>
                         </div>
                         <div className=" flex flex-col gap-y-8">
-                          {getData(qualificationData, "education 2004 - 2018").data.map(
-                            (item, index) => {
-                              const { university, qualification, years } = item;
-                              return (
-                                <div
-                                  className=" flex gap-x-8 group"
-                                  key={index}
-                                >
-                                  <div className=" h-[84px] w-[1px] bg-border relative ml-2">
-                                    <div className=" w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                          {getData(
+                            qualificationData,
+                            "education 2004 - 2018"
+                          ).data.map((item, index) => {
+                            const { university, qualification, years } = item;
+                            return (
+                              <div className=" flex gap-x-8 group" key={index}>
+                                <div className=" h-[84px] w-[1px] bg-border relative ml-2">
+                                  <div className=" w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                </div>
+                                <div>
+                                  <div className=" font-semibold text-xl leading-none mb-2">
+                                    {university}
                                   </div>
-                                  <div>
-                                    <div className=" font-semibold text-xl leading-none mb-2">
-                                      {university}
-                                    </div>
-                                    <div className=" text-lg leading-none text-muted-foreground mb-4">
-                                      {qualification}
-                                    </div>
-                                    <div className=" text-base font-medium">
-                                      {years}
-                                    </div>
+                                  <div className=" text-lg leading-none text-muted-foreground mb-4">
+                                    {qualification}
+                                  </div>
+                                  <div className=" text-base font-medium">
+                                    {years}
                                   </div>
                                 </div>
-                              );
-                            }
-                          )}
+                              </div>
+                            );
+                          })}
                         </div>
                       </div>
                     </div>

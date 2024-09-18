@@ -111,7 +111,7 @@ const Work = () => {
           <h2 className=" section-title mb-4">Work History</h2>
           <p className="subtitle mb-8">
             Each position listed reflects my career progression, skills
-            development, and contributions to the organizations you've worked
+            development, and contributions to the organizations i&apos;ve worked
             for.
           </p>
           <Link href="/projects">
