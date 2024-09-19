@@ -1,5 +1,5 @@
 import React from "react";
-import { Telescope , Handshake, Key, Lightbulb } from "lucide-react";
+import { Telescope, Handshake, Key, Lightbulb } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -8,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-
 
 const servicesData = [
   {
@@ -44,7 +43,7 @@ const Services = () => {
         <h2 className=" section-title mb-12 lg:mb-24 text-center mx-auto">
           My Attributes
         </h2>
-        <div className=" grid lg:grid-cols-4 justify-center gap-y-12 lg:gap-y-24 lg:gap-x-4">
+        <div className=" grid lg:grid-cols-2 justify-center gap-y-12 lg:gap-y-24 lg:gap-x-4">
           {servicesData.map((item, index) => {
             return (
               <Card

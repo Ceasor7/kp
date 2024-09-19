@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
+import useEmblaCarousel from "embla-carousel-react";
+import { useEffect } from "react";
 
-const EmblaCarousel = (props) => {
-  const { slides, options } = props;
+const EmblaCarousel = ({ images, options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     AutoScroll({ playOnInit: true }),
   ]);
@@ -13,18 +12,25 @@ const EmblaCarousel = (props) => {
     const autoScroll = emblaApi?.plugins()?.autoScroll;
     if (!autoScroll) return;
 
-    emblaApi.reInit();
+    if (!autoScroll.isPlaying()) {
+      autoScroll.play();
+    }
   }, [emblaApi]);
 
   return (
-    <div className="embla">
-      <div className=" overflow-hidden" ref={emblaRef}>
-        <div className="embla__container">
-          {slides.map((slide, index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">
-                <span>{slide}</span>
-              </div>
+    <div className="overflow-hidden w-full h-[100px]">
+      <div className="overflow-hidden w-full flex" ref={emblaRef}>
+        <div className="flex">
+          {images.map((src, index) => (
+            <div
+              className="relative min-w-[40%] sm:min-w-[15%] flex justify-center items-center"
+              key={index}
+            >
+              <img
+                src={src}
+                alt={`Slide ${index + 1}`}
+                className="block w-auto h-[40px] sm:h-[60px] object-cover"
+              />
             </div>
           ))}
         </div>

@@ -96,10 +96,10 @@ const skillData = [
     title: "skills",
     data: [
       {
-        name: "♦ International Cultural Relations - I possess strong skills in International Cultural Relations, including the ability to navigate cultural differences, develop cross-cultural communication strategies, and build relationships with individuals and organizations from diverse cultural backgrounds.",
+        name: "⦁ International Cultural Relations - I possess strong skills in International Cultural Relations, including the ability to navigate cultural differences, develop cross-cultural communication strategies, and build relationships with individuals and organizations from diverse cultural backgrounds.",
       },
       {
-        name: "♦ Management Skills - Adequate capacity to perform executive duties in an organization while avoiding crisis situations and promptly solving problems when they occur. These skills include; ",
+        name: "⦁ Management Skills - Adequate capacity to perform executive duties in an organization while avoiding crisis situations and promptly solving problems when they occur. These skills include; ",
       },
       {
         name: "1. Conceptual Skills",
@@ -117,16 +117,16 @@ const skillData = [
         name: "5 Strategic planning skills",
       },
       {
-        name: "♦ Supervision and Leadership",
+        name: "⦁ Supervision and Leadership",
       },
       {
-        name: "♦ Communications and Interpersonal skills",
+        name: "⦁ Communications and Interpersonal skills",
       },
       {
-        name: "♦ ICT Competency - Proficient in Mac & windows environment, competent in Microsoft Office Application suite, the internet and emails",
+        name: "⦁ ICT Competency - Proficient in Mac & windows environment, competent in Microsoft Office Application suite, the internet and emails",
       },
       {
-        name: "♦ Driving skills - I possess strong driving skills with a proven track record of safe and efficient operation of vehicles",
+        name: "⦁ Driving skills - I possess strong driving skills with a proven track record of safe and efficient operation of vehicles",
       },
     ],
   },

@@ -1,149 +1,149 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Workmodal from "../../components/Workmodal";
 import ProjectCard from "../../components/ProjectCard";
+import { X } from "lucide-react";
 
 const projectData = [
   {
-    image: "/work/3.png",
-    name: "Next Website",
+    image: "/work/kcc.png",
+    name: "Kenya Cultural Centre ",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
-    link: "/",
+      "Manager - Programs and Business Development | June 2023 – To date ",
     duties: {
       intro:
-        "During the development of this project, the following duties were performed:",
+        "Steering the creative production process from beginning to completion and ensuring commercial viability of KCC products",
       list: [
-        "Designed and developed the frontend using React.",
-        "Integrated the backend API with the frontend.",
-        "Ensured responsiveness across devices.",
-        "Implemented authentication and authorization.",
-        "Handled deployment and post-deployment monitoring.",
+        "Implementing the core mandate of the Centre",
+        "Ensuring incubation of creative ideas",
+        "Assembling, cataloguing, preserving and managing valuable collections of arts and culture information",
+        "Negotiating the acquisition of new collections on cultural heritage",
+        "Leading business development activities in established service areas such as cultural consulting, exhibition designs and content development, and in emerging service areas such as the digital",
+        "Working with the Management Team to identify strategic opportunities in new geographic areas, sectors or service areas",
+        "Liaising with partners, especially cultural and artistic firms on joint proposals and other business development activities",
       ],
     },
   },
   {
-    image: "/work/1.png",
-    name: "Next Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
-    link: "/",
+    image: "/work/kitft.png",
+    name: "Kenya International Theatre Festival Trust ",
+    description: "Chairperson  | August 2021 - To Date ",
     duties: {
-      intro: "The project responsibilities included the following tasks:",
+      intro:
+        "Governance and Leadership, Strategic Planning and Development, Financial Oversight and Management",
       list: [
-        "Created a custom design system using Tailwind CSS.",
-        "Built reusable components for the project.",
-        "Connected the application with external APIs.",
-        "Optimized images and content for faster loading times.",
-        "Monitored app performance after deployment.",
+        "Provide strategic leadership to the Board, ensuring effective governance.",
+        "Develop and implement the Trust’s vision, mission, and long-term strategy.",
+        "Collaborate with the Festival Director to define the Trust's strategic direction.",
+        "Oversee strategic plans to achieve the Trust’s objectives.",
+        "Ensure sustainable financial management and long-term planning.",
+        "Recruit, develop, and support Trustees, ensuring a skilled Board.",
+        "Build strong relationships with funders, partners, artists, and community organizations.",
       ],
     },
   },
-
   {
-    image: "/work/1.png",
-    name: "Next Website",
+    image: "/work/kcc.png",
+    name: "Kenya Cultural Centre ",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
-    link: "/",
+      "Principal Creative Production Officer  | July 2021 – June 2023 ",
     duties: {
-      intro: "The project responsibilities included the following tasks:",
+      intro:
+        "As a Principal Creative Production Officer, I perform and undertake the following duties and responsibilities",
       list: [
-        "Created a custom design system using Tailwind CSS.",
-        "Built reusable components for the project.",
-        "Connected the application with external APIs.",
-        "Optimized images and content for faster loading times.",
-        "Monitored app performance after deployment.",
+        "Plan, coordinate and implement creative programs for the Kenya Cultural Centre",
+        "Mobilize resources to support creative activities of the Centre",
+        "Steer the creative production process from beginning to completion and ensure commercial viability of the products by turning story ideas into profitable creative productions",
+        "Ensure incubation of creative ideas",
+        "Lead all production efforts including hiring, supervising all staff and crew",
+        "Coordinate with other theatre personnel to ensure the efficiency of the production process",
+        "Liaise between the cast, crew, and director",
       ],
     },
   },
-
   {
-    image: "/work/1.png",
-    name: "Next Website",
+    image: "/work/atu.png",
+    name: "Africa Theatre Union(ATU)",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
-    link: "/",
+      "Africa Theatre Union Secretary General  | April 2019 - To Date ",
     duties: {
-      intro: "The project responsibilities included the following tasks:",
+      intro:
+        "As the Secretary General, I perform and undertake the following duties and responsibilities",
       list: [
-        "Created a custom design system using Tailwind CSS.",
-        "Built reusable components for the project.",
-        "Connected the application with external APIs.",
-        "Optimized images and content for faster loading times.",
-        "Monitored app performance after deployment.",
+        "Liaising with the Chair to plan meetings",
+        "Receiving agenda items from committee members",
+        "Circulating agendas and reports",
+        "Checking that agreed actions are carried out.",
+        "Keeping up-to-date contact details (i.e. names, addresses and telephone numbers) for the management committee and (where relevant) ordinary members of the organization.",
+        "Compiling lists of names and addresses that are useful to the organization, including those of appropriate officials or officers of voluntary organizations.",
+        "Keeping a record of the organization’s activities",
       ],
     },
   },
-
   {
-    image: "/work/1.png",
-    name: "Next Website",
+    image: "/work/nimpa.png",
+    name: "NIMPA",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
-    link: "/",
+      "Principal and Head of Theatre Arts Department  | September 2018 - To Date ",
     duties: {
-      intro: "The project responsibilities included the following tasks:",
+      intro:
+        "As Principal and Head of Theatre Arts Department, I perform and undertake the following duties and responsibilities",
       list: [
-        "Created a custom design system using Tailwind CSS.",
-        "Built reusable components for the project.",
-        "Connected the application with external APIs.",
-        "Optimized images and content for faster loading times.",
-        "Monitored app performance after deployment.",
+        "Developing a strategic plan for NIMPA, Engaging the staff of NIMPA in devising and agreeing the School's plan, Reviewing the performance of the institution in terms of its objectives as stated in its strategic plan and in its staffing and resource plan.",
+        "Act as the secretary of NIMPA Board of Management, Act as the Head of Institution and report to the Board and any other organ of the Board, Staff recruitment matters that fall within the remit of NIMPA.",
+        "Ensuring the effective delivery of high-quality teaching and the maintenance of academic standards., Promoting a culture of learning that is directed to student and industry’s needs, and of teaching that is informed by the research interests of NIMPA’s staff",
       ],
     },
   },
-
   {
-    image: "/work/1.png",
-    name: "Next Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
-    link: "/",
+    image: "/work/kitfest.png",
+    name: "Kenya International Theatre Festival ",
+    description: "Festival Director  | January 2013 - July 2021 ",
     duties: {
-      intro: "The project responsibilities included the following tasks:",
+      intro:
+        "As Festival Director, I performed the following duties and responsibilities",
       list: [
-        "Created a custom design system using Tailwind CSS.",
-        "Built reusable components for the project.",
-        "Connected the application with external APIs.",
-        "Optimized images and content for faster loading times.",
-        "Monitored app performance after deployment.",
+        "Define the strategic vision for the Kenya International Theatre Festival as a leading curated multi-­‐disciplinary performing arts festival presenting bold and new performances.",
+        "Develop a vision for the Festival to create a dynamic, forward looking and engaging Festival program.",
+        "Work with the Board of Trustees to assess the festival strategic plans, identifying opportunities for improvement while keeping all activities in line with the festival’s mission.",
+        "Ensure the Festival’s objectives and activities are communicated effectively internally, externally, and to all stakeholders, working with the team to ensure excellent customer service is delivered on a consistent basis",
+        "Build, strengthen and consolidate relationships with festival partners.",
       ],
     },
   },
-
   {
-    image: "/work/1.png",
-    name: "Next Website",
+    image: "/work/ku.png",
+    name: "Kenyatta University ",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
-    link: "/",
+      "Part-Time Lecturer, Dep of Film & Theatre Arts  | September 2013 - To Date ",
     duties: {
-      intro: "The project responsibilities included the following tasks:",
+      intro:
+        "Theatre and film lecturer tasked with developing course outlines, teaching and examining the following units;",
       list: [
-        "Created a custom design system using Tailwind CSS.",
-        "Built reusable components for the project.",
-        "Connected the application with external APIs.",
-        "Optimized images and content for faster loading times.",
-        "Monitored app performance after deployment.",
+        "Stage Acting",
+        "Stage Directing",
+        "Stage Craft",
+        "Cinematography",
+        "Graphics design",
+        "Sound in theatre production",
+        "Lighting in Theatre Production",
       ],
     },
   },
-
   {
-    image: "/work/1.png",
-    name: "Next Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum error hic cumque sint consequatur doloribus eius corrupti perferendis aliquam?",
-    link: "/",
+    image: "/work/filamu.png",
+    name: "Filamu Interntional Students Festival ",
+    description: "Head Of Operations  | 2009 - 2013 ",
     duties: {
-      intro: "The project responsibilities included the following tasks:",
+      intro:
+        "As Head Of Operations, I performed the following duties and responsibilities",
       list: [
-        "Created a custom design system using Tailwind CSS.",
-        "Built reusable components for the project.",
-        "Connected the application with external APIs.",
-        "Optimized images and content for faster loading times.",
-        "Monitored app performance after deployment.",
+        "Provide support to the Festival Director",
+        "Secure and organize films for the Filamu International Student Festival",
+        "Help run and promote Festival’s call for Entry to the film community around the world",
+        "Help to organize and oversee a pre-selection committee. ",
+        "Develop criteria for film selection and create an online survey for pre-screeners to evaluate films",
+        "Organize database of filmmakers who have submitted films",
       ],
     },
   },
@@ -157,6 +157,26 @@ const Page = () => {
     setModalDuties(duties);
     setModalOpen(true);
   };
+
+  const modalRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      setModalOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isModalOpen]);
 
   return (
     <div className="min-h-screen py-16">
@@ -175,7 +195,7 @@ const Page = () => {
           to overseeing financial strategies and driving sustainable cultural
           growth.
         </p>
-        <div className="text-lg lg:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="text-lg lg:mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
           {projectData.map((project, index) => (
             <ProjectCard
               key={index}
@@ -186,13 +206,23 @@ const Page = () => {
         </div>
         {isModalOpen && (
           <Workmodal onClose={() => setModalOpen(false)}>
-            <h3 className="text-xl font-semibold mb-4">Duties</h3>
-            <p>{modalDuties.intro}</p>
-            <ul className="list-disc pl-5 mt-2">
-              {modalDuties.list.map((duty, idx) => (
-                <li key={idx}>{duty}</li>
-              ))}
-            </ul>
+            <div ref={modalRef}>
+              <div className=" flex justify-between">
+                <h3 className="text-xl font-semibold mb-4">Duties</h3>
+                <X
+                  size={20}
+                  onClick={() => setModalOpen(false)}
+                  className=" cursor-pointer"
+                />
+              </div>
+
+              <p>{modalDuties.intro}</p>
+              <ul className="list-disc pl-5 mt-2">
+                {modalDuties.list.map((duty, idx) => (
+                  <li key={idx}>{duty}</li>
+                ))}
+              </ul>
+            </div>
           </Workmodal>
         )}
       </div>
